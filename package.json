@@ -1,0 +1,19 @@
+{
+  "name": "prosemirror-v8-perf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "prosemirror.js",
+  "scripts": {
+    "build-go-js": "esbuild prosemirror-go.js --format=iife --global-name=applySteps --bundle --outfile=prosemirror-go-out.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jeff Sisson <jeff@bigboy.us> (http://ilikenicethings.com/)",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "esbuild": "^0.19.5",
+    "express": "^4.18.2",
+    "prosemirror-model": "^1.19.3",
+    "prosemirror-transform": "^1.8.0"
+  }
+}
