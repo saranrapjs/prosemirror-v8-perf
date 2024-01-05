@@ -11,7 +11,7 @@ ProseMirror's support for collaborative editing requires an "authority server". 
 
 The "track a current document version" and "Provide a way for editors to receive changes" aspects of what an Authority Server does are relatively runtime agnostic — a server (or even someone else's API), written in any runtime, can perform these without any specific knowledge of ProseMirror.
 
-The "Accept changes from editors" part _does_ require some component to be ProseMirror-aware. ProseMirror's libraries are written in Javascript, targeting the browser and node.js. The [reference implementation](https://github.com/ProseMirror/website/tree/master/src/collab/server) of an authority server stores the current document and steps in-memory, and uses functions exported by ProseMirror libraries to apply steps to a document. This is probably how many authority server implementations work.
+The "Accept changes from editors" part _does_ require some component to be ProseMirror-aware. ProseMirror's libraries are written in Javascript, targeting the browser and node.js. The [reference implementation](https://github.com/ProseMirror/website/tree/master/src/collab/server) of an authority server stores the current document and steps in-memory in a node.js server, and uses functions exported by ProseMirror libraries to apply steps to a document. This is probably how many authority server implementations work.
 
 This repo tries to evaluate alternatives to running an authority server in node. There may be many reasons to do this — a service already written in an existing runtime, performance considerations surrounding node vs. other language runtimes — that are beyond the scope of this example.
 
